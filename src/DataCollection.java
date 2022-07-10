@@ -36,20 +36,20 @@ public class DataCollection {
         System.out.println("Выбери класс бетонна:");
         try {
             String query = "select id_NameConcrete, Rbt from concrete";
-            Main.setCon(DriverManager.getConnection(Main.url, Main.user, Main.password));
-            Main.setStmt(Main.getCon().createStatement());
-            Main.setRs(Main.getStmt().executeQuery(query));
-            while (Main.getRs().next()) {
-                double id_NameConcrete = Main.getRs().getDouble(1);
-                double Rbt = Main.getRs().getDouble(2);
+            DB_Connect.setCon(DriverManager.getConnection(DB_Connect.url, DB_Connect.user, DB_Connect.password));
+            DB_Connect.setStmt(DB_Connect.getCon().createStatement());
+            DB_Connect.setRs(DB_Connect.getStmt().executeQuery(query));
+            while (DB_Connect.getRs().next()) {
+                double id_NameConcrete = DB_Connect.getRs().getDouble(1);
+                double Rbt = DB_Connect.getRs().getDouble(2);
                 System.out.println("B" + id_NameConcrete + " = " + Rbt);
             }
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
-            try {Main.getCon().close();} catch (SQLException e) {e.printStackTrace();}
-            try {Main.getStmt().close();} catch (SQLException e) {e.printStackTrace();}
-            try {Main.getRs().close();} catch (SQLException e) {e.printStackTrace();}
+            try {DB_Connect.getCon().close();} catch (SQLException e) {e.printStackTrace();}
+            try {DB_Connect.getStmt().close();} catch (SQLException e) {e.printStackTrace();}
+            try {DB_Connect.getRs().close();} catch (SQLException e) {e.printStackTrace();}
         }
 
 
