@@ -1,7 +1,7 @@
 import javax.xml.crypto.Data;
 
 public class Estimation {
-    public static void estimation(){
+    public static void main(String[] args) {
         double BaseAnchorLength;
         double MinAnchorLength;
         DataCollection Data = new DataCollection();

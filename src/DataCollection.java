@@ -11,7 +11,7 @@ public class DataCollection {
     double RainforcePerimeterSectionEst; //Длина окружности арматуры
     double LngthSectionAreaFact; //Фактическое сечение арматуры
     double WorkTypeKf; //коэффициент условии работы
-    final double Pi = 3.1415926536;
+    final double Pi = Math.PI;
 
     public void SetVal() {
         Scanner console = new Scanner(System.in);
