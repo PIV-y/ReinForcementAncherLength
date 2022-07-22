@@ -8,6 +8,7 @@ public class DBqueryShowData {
 
 
 
+/*
         String query = "select id_NameConcrete, Rbt from concrete";
         try {
             DB_Connect.setCon(DriverManager.getConnection(DB_Connect.url, DB_Connect.user, DB_Connect.password));
@@ -25,5 +26,5 @@ public class DBqueryShowData {
         DB_Disconnect.disconnect;
 
         return;
+*/
     }
-}

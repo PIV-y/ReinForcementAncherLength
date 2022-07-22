@@ -14,9 +14,11 @@ public class DataCollection {
     final double Pi = Math.PI;
 
     public void SetVal() {
+/*
         Scanner console = new Scanner(System.in);
         System.out.println("Диаметр арматуры, см: ");
         diameterEst = console.nextInt(); //присвоение значения диаметра
+*/
 
         RainforceSectionAreaEst = 2 * Pi * (diameterEst / 2); //Расчетное сечение арматуры
         RainforcePerimeterSectionEst = Pi * (diameterEst / 2) * (diameterEst / 2); //Длина окружности расчетного сечения арматуры
@@ -36,20 +38,20 @@ public class DataCollection {
         System.out.println("Выбери класс бетонна:");
         try {
             String query = "select id_NameConcrete, Rbt from concrete";
-            DB_Connect.setCon(DriverManager.getConnection(DB_Connect.url, DB_Connect.user, DB_Connect.password));
-            DB_Connect.setStmt(DB_Connect.getCon().createStatement());
-            DB_Connect.setRs(DB_Connect.getStmt().executeQuery(query));
-            while (DB_Connect.getRs().next()) {
-                double id_NameConcrete = DB_Connect.getRs().getDouble(1);
-                double Rbt = DB_Connect.getRs().getDouble(2);
+            DB_srvINFO.setCon(DriverManager.getConnection(DB_srvINFO.url, DB_srvINFO.user, DB_srvINFO.password));
+            DB_srvINFO.setStmt(DB_srvINFO.getCon().createStatement());
+            DB_srvINFO.setRs(DB_srvINFO.getStmt().executeQuery(query));
+            while (DB_srvINFO.getRs().next()) {
+                double id_NameConcrete = DB_srvINFO.getRs().getDouble(1);
+                double Rbt = DB_srvINFO.getRs().getDouble(2);
                 System.out.println("B" + id_NameConcrete + " = " + Rbt);
             }
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
-            try {DB_Connect.getCon().close();} catch (SQLException e) {e.printStackTrace();}
-            try {DB_Connect.getStmt().close();} catch (SQLException e) {e.printStackTrace();}
-            try {DB_Connect.getRs().close();} catch (SQLException e) {e.printStackTrace();}
+            try {DB_srvINFO.getCon().close();} catch (SQLException e) {e.printStackTrace();}
+            try {DB_srvINFO.getStmt().close();} catch (SQLException e) {e.printStackTrace();}
+            try {DB_srvINFO.getRs().close();} catch (SQLException e) {e.printStackTrace();}
         }
 
 

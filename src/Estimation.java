@@ -2,6 +2,13 @@ import javax.xml.crypto.Data;
 
 public class Estimation {
     public static void main(String[] args) {
+        UserDataCollection userDataCollection = new UserDataCollection();
+        userDataCollection.SetValRainFrsDiameterEst();
+        userDataCollection.SetValRainFrsDiameterFact();
+        userDataCollection.SetValRainFrsClass();
+        userDataCollection.SetValConcreteClass();
+        userDataCollection.SetValWorkTypeKf();
+/*
         double BaseAnchorLength;
         double MinAnchorLength;
         DataCollection Data = new DataCollection();
@@ -11,5 +18,6 @@ public class Estimation {
                 (2.5*Data.ConcreteType) * Data.RainforcePerimeterSectionEst);
         MinAnchorLength = Data.WorkTypeKf * BaseAnchorLength * (Data.RainforceSectionAreaEst/Data.LngthSectionAreaFact);
         System.out.println("Длинна анкеровки: " + MinAnchorLength + "мм");
+*/
     }
 }
