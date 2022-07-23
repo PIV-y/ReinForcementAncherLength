@@ -3,6 +3,7 @@ import javax.xml.crypto.Data;
 public class Estimation {
     public static void main(String[] args) {
         UserDataCollection userDataCollection = new UserDataCollection();
+
         userDataCollection.SetValRainFrsDiameterEst();
         userDataCollection.SetValRainFrsDiameterFact();
         userDataCollection.SetValRainFrsClass();
