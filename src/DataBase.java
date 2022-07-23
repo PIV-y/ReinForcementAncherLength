@@ -2,7 +2,6 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DataBase {
-    double parameter;
     public static void db_connect(String dbTbl, String Indx, String measure, String query2user){
         String query = "select * from " + dbTbl;
         try {
@@ -26,20 +25,17 @@ public class DataBase {
     }
 
     public static void db_fetch(String dbTbl, String id_Name) {
-        String query = "select parameter from " + dbTbl + " where id_Name " + id_Name;
+        String query = "select parameter from " + dbTbl + " where id_Name=" + id_Name;
         UserDataCollection userDataCollection = new UserDataCollection();
-       // double parameterConcrete;
+
         try {
             DB_srvINFO.setCon(DriverManager.getConnection(DB_srvINFO.url, DB_srvINFO.user, DB_srvINFO.password));
             DB_srvINFO.setStmt(DB_srvINFO.getCon().createStatement());
             DB_srvINFO.setRs(DB_srvINFO.getStmt().executeQuery(query));
-            userDataCollection.RainFrsClass = DB_srvINFO.getRs().getDouble(1);
-/*
+
             while (DB_srvINFO.getRs().next()) {
-                double id_Name = DB_srvINFO.getRs().getDouble(1);
-                double parameter = DB_srvINFO.getRs().getDouble(2);
-                System.out.println(Indx + id_Name + " = " + parameter + measure);
-*/
+                userDataCollection.Temp4Parameter = DB_srvINFO.getRs().getDouble(1);
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }

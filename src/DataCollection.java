@@ -19,6 +19,7 @@ public class DataCollection {
         System.out.println("Диаметр арматуры, см: ");
         diameterEst = console.nextInt(); //присвоение значения диаметра
 */
+/*
 
         RainforceSectionAreaEst = 2 * Pi * (diameterEst / 2); //Расчетное сечение арматуры
         RainforcePerimeterSectionEst = Pi * (diameterEst / 2) * (diameterEst / 2); //Длина окружности расчетного сечения арматуры
@@ -55,6 +56,7 @@ public class DataCollection {
         }
 
 
+*/
 /*
             Concrete.setValConcreteSpec();
         System.out.println("Список классов бетона:");
@@ -67,7 +69,8 @@ public class DataCollection {
         String TempCncrtTpe = console2.nextLine();
         ConcreteType = Concrete.concretespec.get(TempCncrtTpe); //присвоение значения бетона от заданного наименования
         System.out.println(ConcreteType); // ДЛЯ ПРОВЕРКИ. УДАЛИТЬ
-*/
+*//*
+
 
         RainForcment.setValRainforcment();
         System.out.println("Список классов арматуры:");
@@ -93,5 +96,6 @@ public class DataCollection {
         WorkTypeKf = KfWorkType.kfWorkType.get(TempWorkTypeKfTpe); //присвоение значение коэф-та работы
         System.out.println(WorkTypeKf); // ДЛЯ ПРОВЕРКИ. УДАЛИТЬ
 
+*/
     }
 }
