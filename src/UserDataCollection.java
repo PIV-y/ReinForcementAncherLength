@@ -2,31 +2,35 @@ import java.util.Scanner;
 
 public class UserDataCollection {
 
-    double ReinFrsDiameterEst;
-    double ReinFrsDiameterFact;
+    public static double ReinFrsDiameterEst;
+    public static double ReinFrsDiameterFact;
     public static double Temp4Parameter;
-    String IDreinforcement; //Наименование класса арматуры
-    double ReinFrsClass; //Значение Rs арматуры по классу
-    String IDconcrete; //Наименование класса бетона
-    double ConcreteClass; //Значение Rbond бетона по классу
-    double WorkTypeKf; //коэффициент условии работы
-    String IDWorkTypeKf; //Наименование коэффициента работы
+    public static String IDreinforcement; //Наименование класса арматуры
+    public static double ReinFrsClass; //Значение Rs арматуры по классу
+    public static String IDconcrete; //Наименование класса бетона
+    public static double ConcreteClass; //Значение Rbond бетона по классу
+    public static double WorkTypeKf; //коэффициент условии работы
+    public static String IDWorkTypeKf; //Наименование коэффициента работы
 
-    Scanner console = new Scanner(System.in);
-
-    public void SetValReinFrsDiameterEst(){
+    public static void SetValReinFrsDiameterEst(){
+        Scanner console = new Scanner(System.in);
         System.out.println("Диаметр расчетной арматуры, см: ");
-        ReinFrsDiameterEst = console.nextInt();
+        ReinFrsDiameterEst = console.nextDouble();
+        System.out.println("d="+ReinFrsDiameterEst+"см");
         //присвоение значения диаметра расчетной арматуры
     }
 
-    public void SetValReinFrsDiameterFact(){
+    public static void SetValReinFrsDiameterFact(){
+        Scanner console = new Scanner(System.in);
         System.out.println("Диаметр фактически применяемой арматуры, см: ");
-        ReinFrsDiameterFact = console.nextInt();
+        ReinFrsDiameterFact = console.nextDouble();
+        System.out.println("d="+ReinFrsDiameterFact+"см");
+
         //присвоение значения диаметра фактически используемой арматуры
     }
 
-    public void SetValReinFrsClass(){
+    public static void SetValReinFrsClass(){
+        Scanner console = new Scanner(System.in);
         String dbTbl = "reinforcement";
         String IndxParameter = "A";
         String measure = "MPa (Rs)";
@@ -38,7 +42,8 @@ public class UserDataCollection {
         System.out.println("Rs = "+ReinFrsClass+" MPa");
     }
 
-    public void SetValConcreteClass(){
+    public static void SetValConcreteClass(){
+        Scanner console = new Scanner(System.in);
         String dbTbl = "concrete";
         String IndxParameter = "B";
         String measure = "MPa (Rbond)";
@@ -50,7 +55,8 @@ public class UserDataCollection {
         System.out.println("Rbond = "+ConcreteClass+" MPa");
     }
 
-    public void SetValWorkTypeKf(){
+    public static void SetValWorkTypeKf(){
+        Scanner console = new Scanner(System.in);
         String dbTbl = "kfworktype";
         String IndxParameter = "";
         String measure = "";

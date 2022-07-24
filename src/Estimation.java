@@ -2,13 +2,14 @@ import javax.xml.crypto.Data;
 
 public class Estimation {
     public static void main(String[] args) {
-        UserDataCollection userDataCollection = new UserDataCollection();
 
-        userDataCollection.SetValReinFrsDiameterEst();
-        userDataCollection.SetValReinFrsDiameterFact();
-        userDataCollection.SetValReinFrsClass();
-        userDataCollection.SetValConcreteClass();
-        userDataCollection.SetValWorkTypeKf();
+        UserDataCollection.SetValReinFrsDiameterEst();
+        UserDataCollection.SetValReinFrsDiameterFact();
+        UserDataCollection.SetValReinFrsClass();
+        UserDataCollection.SetValConcreteClass();
+        UserDataCollection.SetValWorkTypeKf();
+        EstDataCollection.SetValSectionPerimeter();
+
 /*
         double BaseAnchorLength;
         double MinAnchorLength;
