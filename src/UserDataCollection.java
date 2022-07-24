@@ -35,7 +35,7 @@ public class UserDataCollection {
         IDreinforcement = console.next();
         DataBase.db_fetch(dbTbl, IDreinforcement);
         ReinFrsClass = Temp4Parameter;
-        System.out.println(ReinFrsClass);
+        System.out.println("Rs = "+ReinFrsClass+" MPa");
     }
 
     public void SetValConcreteClass(){
@@ -47,7 +47,7 @@ public class UserDataCollection {
         IDconcrete = console.next();
         DataBase.db_fetch(dbTbl, IDconcrete);
         ConcreteClass = Temp4Parameter;
-        System.out.println(ConcreteClass);
+        System.out.println("Rbond = "+ConcreteClass+" MPa");
     }
 
     public void SetValWorkTypeKf(){
@@ -59,6 +59,6 @@ public class UserDataCollection {
         IDWorkTypeKf = console.next();
         DataBase.db_fetch(dbTbl, IDWorkTypeKf);
         WorkTypeKf = Temp4Parameter;
-        System.out.println(WorkTypeKf);
+        System.out.println("Kf = "+WorkTypeKf);
     }
 }
