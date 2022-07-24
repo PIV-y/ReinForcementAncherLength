@@ -5,10 +5,10 @@ import java.util.Scanner;
 public class DataCollection {
     double diameterEst;
     double diameterFact;
-    double RainforceType; //Арматурный профиль
+    double ReinforceType; //Арматурный профиль
     double ConcreteType; //Класс бетона
-    double RainforceSectionAreaEst; //Расчетная площадь сечение арматуры
-    double RainforcePerimeterSectionEst; //Длина окружности арматуры
+    double ReinforceSectionAreaEst; //Расчетная площадь сечение арматуры
+    double ReinforcePerimeterSectionEst; //Длина окружности арматуры
     double LngthSectionAreaFact; //Фактическое сечение арматуры
     double WorkTypeKf; //коэффициент условии работы
     final double Pi = Math.PI;
@@ -21,8 +21,8 @@ public class DataCollection {
 */
 /*
 
-        RainforceSectionAreaEst = 2 * Pi * (diameterEst / 2); //Расчетное сечение арматуры
-        RainforcePerimeterSectionEst = Pi * (diameterEst / 2) * (diameterEst / 2); //Длина окружности расчетного сечения арматуры
+        ReinforceSectionAreaEst = 2 * Pi * (diameterEst / 2); //Расчетное сечение арматуры
+        ReinforcePerimeterSectionEst = Pi * (diameterEst / 2) * (diameterEst / 2); //Длина окружности расчетного сечения арматуры
 
         //"select id_NameConcrete, Rbt from concrete"
         System.out.println("Выберите номер используемой арматуры:");
@@ -34,7 +34,7 @@ public class DataCollection {
             diameterFact = console5.nextInt();
             LngthSectionAreaFact = 2 * Pi * (diameterFact / 2);
         } else
-            LngthSectionAreaFact = RainforceSectionAreaEst;
+            LngthSectionAreaFact = ReinforceSectionAreaEst;
 
         System.out.println("Выбери класс бетонна:");
         try {
@@ -72,17 +72,17 @@ public class DataCollection {
 *//*
 
 
-        RainForcment.setValRainforcment();
+        ReinForcment.setValReinforcment();
         System.out.println("Список классов арматуры:");
-        for (String temp1 : RainForcment.rainforcmentspec.keySet()) {
-            Double temp2 = RainForcment.rainforcmentspec.get(temp1);
+        for (String temp1 : ReinForcment.reinforcmentspec.keySet()) {
+            Double temp2 = ReinForcment.reinforcmentspec.get(temp1);
             System.out.println(temp1 + " - " + temp2);
         }
         System.out.println("Выбери необходимый класс арматуры из списка:");
         Scanner console3 = new Scanner(System.in);
-        String TempRainfrcmntTpe = console3.nextLine();
-        RainforceType = RainForcment.rainforcmentspec.get(TempRainfrcmntTpe);
-        System.out.println(RainforceType); // ДЛЯ ПРОВЕРКИ. УДАЛИТЬ
+        String TempReinfrcmntTpe = console3.nextLine();
+        ReinforceType = ReinForcment.reinforcmentspec.get(TempReinfrcmntTpe);
+        System.out.println(ReinforceType); // ДЛЯ ПРОВЕРКИ. УДАЛИТЬ
 
         KfWorkType.kfworkSetType();
         System.out.println("тип работы стержня:");

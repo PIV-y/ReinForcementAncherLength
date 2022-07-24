@@ -4,9 +4,9 @@ public class Estimation {
     public static void main(String[] args) {
         UserDataCollection userDataCollection = new UserDataCollection();
 
-        userDataCollection.SetValRainFrsDiameterEst();
-        userDataCollection.SetValRainFrsDiameterFact();
-        userDataCollection.SetValRainFrsClass();
+        userDataCollection.SetValReinFrsDiameterEst();
+        userDataCollection.SetValReinFrsDiameterFact();
+        userDataCollection.SetValReinFrsClass();
         userDataCollection.SetValConcreteClass();
         userDataCollection.SetValWorkTypeKf();
 /*
@@ -15,9 +15,9 @@ public class Estimation {
         DataCollection Data = new DataCollection();
         Data.SetVal();
 
-        BaseAnchorLength = (Data.RainforceType*Data.RainforceSectionAreaEst) / (
-                (2.5*Data.ConcreteType) * Data.RainforcePerimeterSectionEst);
-        MinAnchorLength = Data.WorkTypeKf * BaseAnchorLength * (Data.RainforceSectionAreaEst/Data.LngthSectionAreaFact);
+        BaseAnchorLength = (Data.ReinforceType*Data.ReinforceSectionAreaEst) / (
+                (2.5*Data.ConcreteType) * Data.ReinforcePerimeterSectionEst);
+        MinAnchorLength = Data.WorkTypeKf * BaseAnchorLength * (Data.ReinforceSectionAreaEst/Data.LngthSectionAreaFact);
         System.out.println("Длинна анкеровки: " + MinAnchorLength + "мм");
 */
     }
