@@ -5,13 +5,13 @@ public class Estimation {
     public static double MinAnchorLength;
 
     public static void main(String[] args) {
-        UserDataCollection.SetValReinFrsDiameterEst();
-        UserDataCollection.SetValReinFrsDiameterFact();
-        UserDataCollection.SetValReinFrsClass();
-        UserDataCollection.SetValConcreteClass();
-        UserDataCollection.SetValWorkTypeKf();
-        EstDataCollection.SetValSectionPerimeter();
-        Calculation();
+        UserDataCollection.SetValReinFrsDiameterEst(); //установка диаметра расчетной арматуры
+        UserDataCollection.SetValReinFrsDiameterFact(); //установка диаметра фактической арматуры
+        UserDataCollection.SetValReinFrsClass(); //установка класса арматуры
+        UserDataCollection.SetValConcreteClass(); //установка класса бетона
+        UserDataCollection.SetValWorkTypeKf(); //установка коэффициента условий работы
+        EstDataCollection.SetValSectionPerimeter(); //подсчет длины окружности арматуры
+        Calculation(); //выполнение расчета длины базовой анкеровки и минимальной
     }
 
     public static void Calculation(){
